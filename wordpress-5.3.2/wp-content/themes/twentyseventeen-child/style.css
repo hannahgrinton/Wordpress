@@ -70,3 +70,19 @@ body.has-header-video .site-title a {
 .wp-custom-header-video-button .wp-custom-header-video-play {
     font-size: 12px !important;
 }
+/* Make sure down arrow always is visible */
+@media screen and (min-width: 48em) {
+    .site-header .site-navigation-fixed .menu-scroll-down {
+        display: block !important;
+        padding: 1em;
+        position: absolute;
+        right: 0;
+    }
+    /* rotate down arrow to be up arrow when it makes sense */
+    .site-navigation-fixed .wrap .main-navigation .menu-scroll-down .icon {
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+}

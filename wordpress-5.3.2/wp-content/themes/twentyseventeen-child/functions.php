@@ -55,3 +55,11 @@ function childtheme_theme_menu_class($atts, $item, $args) {
     return $atts;
 }
 add_filter('nav_menu_link_attributes','childtheme_theme_menu_class', 0,3);
+
+add_filter( 'body_class', 'custom_class' );
+function custom_class( $classes ) {
+    if ( is_page_template( 'page-with-sidebar.php' ) ) {
+        $classes[] = 'has-sidebar';
+    }
+    return $classes;
+}
