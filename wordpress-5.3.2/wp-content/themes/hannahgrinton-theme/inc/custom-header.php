@@ -23,6 +23,7 @@ function hannahgrinton_theme_custom_header_setup() {
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
+		'flex-width'			 => true,
 		'wp-head-callback'       => 'hannahgrinton_theme_header_style',
 	) ) );
 }

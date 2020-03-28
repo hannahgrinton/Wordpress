@@ -45,6 +45,7 @@ if ( ! function_exists( 'hannahgrinton_theme_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'hannahgrinton-theme' ),
+			'menu-2' => esc_html__( 'Secondary', 'hannahgrinton-theme' )
 		) );
 
 		/*
@@ -113,6 +114,15 @@ function hannahgrinton_theme_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Page-Sidebar', 'hannahgrinton-theme' ),
+		'id'            => 'sidebar-page',
+		'description'   => esc_html__( 'Add widgets here.', 'hannahgrinton-theme' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'hannahgrinton_theme_widgets_init' );
 
@@ -120,9 +130,20 @@ add_action( 'widgets_init', 'hannahgrinton_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hannahgrinton_theme_scripts() {
+	//adding fonts
+	wp_enqueue_style( 'hannahgrinton-theme-fonts', 'https://fonts.googleapis.com/css2?family=Raleway&family=Sen&display=swap' );
+
 	wp_enqueue_style( 'hannahgrinton-theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'hannahgrinton-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	//adding private FA CDN
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/6d0b9dc65c.js' );
+
+	wp_enqueue_script( 'hannahgrinton-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	
+	wp_localize_script( 'hannahgrinton-theme-navigation', 'hannahgrintonthemeScreenReaderText', array(
+        'expand' => __( 'Expand child menu', 'hannahgrinton-theme'),
+        'collapse' => __( 'Collapse child menu', 'hannahgrinton-theme'),
+    ));
 
 	wp_enqueue_script( 'hannahgrinton-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -159,3 +180,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * SVG icons functions and filters.
+ */
+//require get_parent_theme_file_path( '/inc/icon-functions.php' );

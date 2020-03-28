@@ -27,6 +27,13 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'hannahgrinton-theme' ), 'hannahgrinton-theme', '<a href="http://hannahgrinton.ca">Hannah Grinton</a>' );
 				?>
 		</div><!-- .site-info -->
+		<!-- <div class="footer-menu"><?php //wp_nav_menu( array( 'theme_location' => 'menu-2')); ?></div> -->
+		<div class="footer-menu">
+			<a href="twitter.com" target="_blank"><i class="fab fa-twitter"></i>&nbsp;Twitter</a>
+			<a href="facebook.com" target="_blank"><i class="fab fa-facebook"></i>&nbsp;Facebook</a>
+			<a href="pinterest.com" target="_blank"><i class="fab fa-pinterest"></i>&nbsp;Pinterest</a>
+			<a href="instagram.com" target="_blank"><i class="fab fa-instagram"></i>&nbsp;Instagram</a>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

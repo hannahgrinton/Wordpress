@@ -1,0 +1,22 @@
+{
+  "name": "hannahgrinton-theme",
+  "version": "0.0.1",
+  "description": "Accessible WordPress theme utilizing flex layouts and modern development practices.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hannah Grinton",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-image": "*",
+    "gulp-jshint": "*",
+    "gulp-newer": "*",
+    "gulp-postcss": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "jshint": "*"
+  }
+}

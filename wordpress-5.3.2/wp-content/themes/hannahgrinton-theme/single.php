@@ -27,8 +27,16 @@ get_header();
 			endif;
 
 		endwhile; // End of the loop.
-		?>
 
+		?>
+		<h3>Here is the category list functions in action</h3>
+		<?php 
+			echo "\nall categories\n";
+			echo wp_list_categories(); 
+			echo "\ncategories pertaining to post\n";
+			echo get_the_category_list();
+
+		?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
