@@ -1,0 +1,65 @@
+.content-area {
+    &--contact {
+        max-width: 6000px;
+        @media screen and (max-width: $query__medium) {
+            padding: 0;
+        }
+    }
+    
+}
+.site-main {
+    &--contact {
+        margin-top: 0;
+        padding-top: 20px;
+        padding-bottom: 60px;
+        background-image: url(https://hannahgrinton.ca/wp-content/uploads/2020/03/Historical-Maps-of-Nova-Scotia-1030x526-1-e1585679385743.png);
+    }
+    
+}
+.contact {
+    padding-top: 0px;
+    margin-top: 20px;
+    background-color: $color__background-fade;
+    max-width: 420px;
+    padding: 10px;
+    @media screen and (max-width: $query__medium) {
+        margin-left: 40px;
+    }
+    &__items {
+        //width: 400px;
+        &__item {
+            width: 100%;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            i {
+                color: $color__text-input;
+                font-size: 36px;
+                margin-right: 10px;
+            }
+        }
+    }
+    &__link {
+        margin-left: 20px;
+        text-align: left;
+        text-decoration: none;
+        &--21 {
+            margin-left: 21px;
+        }
+        &--24 {
+            margin-left: 24px;
+        }
+        &--27 {
+            margin-left: 27px;
+        }
+        &--28 {
+            margin-left: 28px;
+        }
+    }
+}
+.entry-title {
+    &--contact {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+}

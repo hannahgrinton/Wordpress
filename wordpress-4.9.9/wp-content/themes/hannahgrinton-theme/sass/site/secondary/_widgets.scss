@@ -1,0 +1,24 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+//the aside holding the widgets
+.widget-area {
+	padding-top: 48px;
+	margin-left: 20px;
+	@media screen and (max-width: $query__medium) {
+		margin-left: 45px;
+		width: 100%;
+	}
+}
+//widget title
+.widget-title {
+	font-size: 1.2em;
+	margin-bottom: 0;
+	padding-bottom: 10px;
+	color: $color__text-accent;
+}

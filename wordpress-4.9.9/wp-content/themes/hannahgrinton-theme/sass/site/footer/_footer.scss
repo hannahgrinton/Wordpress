@@ -1,0 +1,32 @@
+.site-footer {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.social-links {
+    width: 400px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+a.social-links__link {
+    font-size: 22px;
+}
+//------------------------------------- media queries to detect light or dark mode
+@media (prefers-color-scheme: dark) {
+	.site-footer {
+        background-color: $color__background-body;
+        color: $color__text-main;
+        border-top: 1px solid $color__border-light;
+    }
+}
+@media (prefers-color-scheme: light) {
+    .site-footer {
+        background-color: $color__background-body-light;
+        color: $color__text-main-dark;
+        border-top: 1px solid $color__border-dark;
+    }
+}

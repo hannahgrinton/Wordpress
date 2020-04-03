@@ -1,0 +1,50 @@
+@media screen and (max-width: 431px ) {
+    .content-area {
+        max-width: 300px;
+    }
+    .project {
+        &__navigation {
+            max-width: 300px;
+            &__link {
+                font-size: 16px;
+                padding-top: 5px;
+            }
+        }
+    }
+    .experience {
+        &__navigation {
+            max-width: 300px;
+            &__link {
+                font-size: 12px;
+                padding-top: 5px;
+            }
+        }
+    }
+    .contact {
+        margin-left: 10px;
+        &__items {
+            &__item {
+                i {
+                    font-size: 16px;
+                    margin-right: 5px;
+                    text-align: right;
+                }
+            }
+        }
+        &__link {
+            font-size: 12px;
+            &--21 {
+                margin-left: 21px;
+            }
+            &--24 {
+                margin-left: 22px;
+            }
+            &--27 {
+                margin-left: 23px;
+            }
+            &--28 {
+                margin-left: 24px;
+            }
+        }
+    }
+}

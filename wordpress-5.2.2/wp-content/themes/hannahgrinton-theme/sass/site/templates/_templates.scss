@@ -1,0 +1,12 @@
+//template style sheets - do not change order of imports!
+@import "home-page";
+@import "project";
+@import "experience";
+@import "services";
+@import "about";
+@import "contact";
+@import "extra-small-screen";
+
+.site-main {
+    margin-bottom: 150px;
+}

@@ -1,0 +1,93 @@
+@import "header-menu";
+.site-header {
+	width: 100%;
+	position: relative;
+	font-family: $font__sens;
+	color: $color__text-main;
+	margin-top: 34vw;
+	padding-top: 20px;
+	background: -webkit-linear-gradient(to bottom, rgba(104, 104, 104, 0), rgba(36, 36, 36, 0.418));  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, rgba(104, 104, 104, 0), rgba(36, 36, 36, 0.418)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	@media screen and (max-width: $query__medium) {
+		margin-top: 30vw;
+	}
+	@media screen and (max-width: 431px ) {
+		margin-top: 20px;
+	}
+}
+.site-branding {
+	min-height: 65px;
+	width: 100%;
+	padding-left: 130px;
+	@media screen and (max-width: $query__medium) {
+		padding-left: 40px;
+	}
+}
+
+.site-title {
+	margin: 0;
+	padding: 0;
+	font-size: 3.6em;
+	font-weight: 500;
+	line-height: 1em;
+	@media screen and (max-width: 431px ) {
+		font-size: 1.8em;
+	}
+	a {
+		color: $color__text-main;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+.site-description {
+	margin: 0;
+	font-size: 1.4em;
+	font-weight: 100;
+	padding-left: 5px;
+	color: $color__text-accent;
+	font-family: $font__raleway;
+}
+//header image styles
+.header-image { //figure tag
+	width: 100%;
+	top: 0;
+	margin: 0;
+	position: fixed;
+	z-index: -1;
+}
+.header-image img { //img tag
+	width: 100%;
+	top: 0;
+	height: 100%;
+}
+
+// @media screen and (min-width: $query__medium) {
+// 	.site-header {
+// 		display: flex;
+// 		justify-content: space-between;
+// 	}
+
+// 	.site-branding {
+// 		width: 35%;
+// 	}
+
+// 	.site-navigation {
+// 		width: 55%;
+// 	}
+// }
+//------------------------------------- media queries to detect light or dark mode
+// @media (prefers-color-scheme: dark) {
+// 	.site-header, .site-title a {
+// 		color: $color__text-main; 
+// 	}
+// }
+// @media (prefers-color-scheme: light) {
+//     .site-header, .site-title a {
+// 		color: $color__text-main-dark;
+// 	}
+// }

@@ -1,0 +1,57 @@
+.site-main {
+    &--home-page {
+
+    }
+}
+
+.entry-title {
+    &--home-page {
+
+    }
+}
+.entry-content {
+    &--home-page {
+        margin-bottom: 30px;
+    }
+}
+.icon i {
+    font-size: 52px;
+    margin: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from($color__text-screen), to($color__text-input));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon-text {
+    font-size: 22px;
+    color: $color__text-input;
+}
+.home-page {
+    &__icons {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        &__icon {
+            a {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                text-decoration: none;
+                i, .icon-text {
+                    transition: 1s;
+                }
+                
+                &:hover i {
+                    background: $color__text-screen;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                &:hover .icon-text {
+                    color: $color__text-screen;
+                }
+            }
+        }
+    }
+}
+

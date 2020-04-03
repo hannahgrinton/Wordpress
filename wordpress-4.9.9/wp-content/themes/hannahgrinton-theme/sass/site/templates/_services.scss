@@ -1,0 +1,54 @@
+.services {
+    //padding-bottom: 40px;
+    &__title {
+        font-size: 22px;
+        color: $color__link;
+    }
+    &__section {
+        margin-bottom: 40px;
+    }
+    &__content {
+        margin-left: 10px;
+        &__item {
+            margin: 10px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__item__title {
+        @media screen and (max-width: $query__small){
+            font-size: 14px;
+        }
+        @media (prefers-color-scheme: dark) {
+            color: $color__link;
+        }
+        @media (prefers-color-scheme: light) {
+            color: $color__text-input;
+        }
+    }
+    &__progress-bar {
+        width: 390px;
+        @media screen and (max-width: 700px) {
+            width: 280px;
+        }
+        @media screen and (max-width: $query__small){
+            width: 180px;
+        }
+        height: 10px;
+        background-color: $color__background-body-light;
+        @media (prefers-color-scheme: dark) {
+            border: 1px solid $color__background-body;
+        }
+        @media (prefers-color-scheme: light) {
+            border: 1px solid $color__border-dark;
+        }
+        &__progress {
+            background: $color__link;
+            height: 8px;
+            background: -webkit-linear-gradient(to right, $color__link, $color__link-hover);
+            background: linear-gradient(to right, $color__link, $color__link-hover);
+        }
+    }
+}

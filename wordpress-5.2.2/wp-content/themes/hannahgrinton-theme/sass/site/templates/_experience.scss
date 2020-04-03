@@ -1,0 +1,103 @@
+.experience {
+    margin-top: 30px;
+    &__navigation {
+        margin-bottom: 40px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        &__link {
+            font-size: 18px;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-decoration: none !important;
+            cursor: pointer;
+            &--current {
+                border-bottom: 3px solid;
+            }
+            @media screen and (max-width: $query__medium) {
+                font-size: 12px;
+            }
+        }
+    }
+    &__content {
+        margin-bottom: 80px;
+        &__section {
+            flex-flow: row wrap;
+            justify-content: space-between;
+            display: none;
+        }
+    }
+}
+.experience-item {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &__date {
+        color: $color__link;
+        font-size: 18px;
+    }
+    &__work {
+        text-align: right;
+    }
+    &__text {
+        padding-top: 5px;
+        text-align: right;
+        max-width: 430px;
+    }
+}
+.calendar-day {
+    border: 1px solid $color__link;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 70px;
+    margin: 10px;
+    margin-left: 0;
+    border-radius: 5px;
+    height: 46px; //perfect! do not change!!! I mean it!
+}
+.month {
+    background-color: $color__link;
+    font-size: 12px;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    border-bottom: 2px solid $color__link;
+    color: $color__text-main;
+}
+.day {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    background-color: $color__background-body-light;
+    color: $color__text-main-dark;
+    border-radius: 0 0 5px 5px; //same goes for this! No touchy!
+}
+.experience-date {
+    display: flex;
+    flex-flow: row nowrap;
+}
+//------------------------------------- media queries to detect light or dark mode
+@media (prefers-color-scheme: dark) {
+	.experience__navigation {
+		border-bottom: 1px solid $color__border-light;
+	}
+}
+@media (prefers-color-scheme: light) {
+	.experience__navigation {
+		border-bottom: 1px solid $color__border-dark;
+	}
+}
+//-------------------------------------- media query for smaller screens
+@media screen and (max-width: $query__medium) {
+    .experience-item {
+        display: flex;
+        flex-flow: column wrap;
+        
+        &__text, &__work {
+            text-align: left;
+        }
+    }
+}

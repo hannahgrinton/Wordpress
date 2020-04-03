@@ -1,0 +1,48 @@
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.entry-meta, .entry-footer {
+	display: none;
+}
+.entry-title a{
+	text-decoration: none;
+	pointer-events: none;
+	@media(prefers-color-scheme: dark) {
+        color: $color__text-accent !important;
+    }
+    @media(prefers-color-scheme: light) {
+        color: $color__link-hover !important;
+    }
+}
+
+.content-area {
+	//width: 50%;
+	margin: 0;
+	padding: 0;
+	max-width: 800px;
+	padding-left: 140px;
+	@media screen and (max-width: $query__medium) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}

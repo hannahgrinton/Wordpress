@@ -1,0 +1,30 @@
+//background colors for light and dark mode
+$color__background-body: rgb(22, 23, 24);
+$color__background-body-light: #fcfafa;
+$color__background-fade: #fcfafac4;
+//--------------------------------------- default stuff
+$color__background-screen: #fcfafa;
+$color__background-hr: #ccc;
+$color__background-button: #bcc6d3;
+$color__background-pre: #eee;
+$color__background-ins: #fcfafa;
+//--------------------------------------- text stuff
+$color__text-screen: #bcc6d3;
+$color__text-input: #37485e;
+$color__text-input-focus: rgb(37, 36, 36);
+$color__link: #a1b2c9;
+$color__link-visited: #a1b2c9;
+$color__link-hover: #64758b;
+$color__text-accent: #bcc6d3;
+//text colors to change based on light or dark mode
+$color__text-main: #fcfafa;
+$color__text-main-dark: rgb(37, 36, 36);
+//border colors for light/dark mode
+$color__border-light: #fcfafa38;
+$color__border-dark: #37485e8f;
+//--------------------------------------- buttons/forms
+$color__border-button: #bcc6d3;
+$color__border-button-hover: #64758b;
+$color__border-button-focus: #64758b;
+$color__border-input: #fcfafa;
+$color__border-abbr: #666;

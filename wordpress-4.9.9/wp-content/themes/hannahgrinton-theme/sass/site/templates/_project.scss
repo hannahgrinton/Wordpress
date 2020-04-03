@@ -1,0 +1,95 @@
+.content-area {
+    @media screen and (max-width: $query__medium) {
+		padding-left: 45px;
+		padding-right: 40px;
+	}
+}
+.project {
+    margin-top: 30px;
+    
+    &__navigation {
+        margin-bottom: 40px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        &__link {
+            font-size: 18px;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-decoration: none !important;
+            cursor: pointer;
+            &--current {
+                border-bottom: 3px solid;
+            }
+        }
+    }
+    &__content {
+        margin-bottom: 80px;
+        &__section {
+            flex-flow: row wrap;
+            justify-content: space-between;
+            display: none;
+        }
+    }
+    &__card {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 40px; 
+        width: 300px;
+        background-color: $color__background-body-light;
+        box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+        &__image {
+            z-index: 0;
+            height: 140px;
+            
+        }
+        &__header {
+            z-index: 1;
+            background-color: $color__background-body-light;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 10px;
+            color: $color__text-input;
+            border-top: 1px solid $color__border-dark;
+        }
+        &__body {
+            z-index: 1;
+            background-color: $color__background-body-light;
+            padding-left: 10px;
+            font-size: 14px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            color: $color__text-main-dark;
+            height: 100px;
+            overflow: hidden;
+        }
+        &__links {
+            border-top: 1px solid $color__border-dark;
+            width: 100%;
+            align-self: center;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+.card-links {
+    text-decoration: none;
+    &--disabled {
+        color: $color__link-hover;
+        pointer-events: none;
+    }
+}
+//------------------------------------- media queries to detect light or dark mode
+@media (prefers-color-scheme: dark) {
+	.project__navigation {
+		border-bottom: 1px solid $color__border-light;
+	}
+}
+@media (prefers-color-scheme: light) {
+	.project__navigation {
+		border-bottom: 1px solid $color__border-dark;
+	}
+}

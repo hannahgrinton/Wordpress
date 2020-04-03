@@ -1,0 +1,29 @@
+
+.site-content {
+	//padding-left: 60px;
+	//display: flex;
+	//flex-flow: row wrap;
+	//justify-content: space-between;
+	//justify-content: space-around;
+	display: grid;
+	grid-template-columns: 0fr 2fr 1fr;
+	margin: 0;
+	padding: 0;
+	@media screen and (max-width: $query__medium) {
+		grid-template-columns: 1fr;
+	}
+}
+
+//------------------------------------- media queries to detect light or dark mode
+@media (prefers-color-scheme: dark) {
+	.site-content {
+		background: $color__background-body;
+		color: $color__text-main; 
+	}
+}
+@media (prefers-color-scheme: light) {
+    .site-content {
+		background: $color__background-body-light;
+		color: $color__text-main-dark;
+	}
+}
